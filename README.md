@@ -1,4 +1,3 @@
-![image](https://github.com/muhammadha04/JavaEats-Restaurant-Information-System/assets/103769302/0dd16b75-0d50-4b8f-a212-c76601879b94)# JavaEats Restaurant Information System
 
 ## Overview
 
