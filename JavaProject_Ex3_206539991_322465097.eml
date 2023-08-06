@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_15_PREVIEW" inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/classes/test/JavaProject_Ex3_206539991_322465097"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<levels>
+		<level name="lib1" value="project"/>
+	</levels>
+</component>
