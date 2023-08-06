@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Deliveries">
+   <top>
+      <Pane prefHeight="67.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#viewDel" prefHeight="64.0" prefWidth="175.0" text="View Deliveries">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openAdd" prefHeight="65.0" prefWidth="150.0" text="Add Delivery">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <BorderPane id="contentArea" fx:id="contentArea" prefHeight="591.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></BorderPane>
+   </center>
+</BorderPane>

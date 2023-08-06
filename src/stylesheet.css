@@ -1,0 +1,7 @@
+.button{
+	-fx-alignment:center-left;
+}
+
+.button:pressed {
+}
+

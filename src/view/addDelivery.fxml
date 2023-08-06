@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.addDelivery">
+   <right>
+      <GridPane prefHeight="474.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="10.0" prefWidth="350.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="232.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="409.0">
+               <children>
+                  <TableView fx:id="tblView" prefHeight="200.0" prefWidth="441.0">
+                    <columns>
+                        <TableColumn prefWidth="403.0" text="All Orders">
+                           <columns>
+                            <TableColumn fx:id="orderidCol" prefWidth="75.0" text="Order ID" />
+                            <TableColumn fx:id="cusidCol" prefWidth="113.0" text="Customer ID" />
+                              <TableColumn fx:id="priceCol" prefWidth="57.0" text="Price" />
+                              <TableColumn fx:id="dishesCol" prefWidth="158.0" text="Dishes" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Button mnemonicParsing="false" onAction="#addOrder" text="Add Order">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Separator>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="tblView1" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="Current Order(s)">
+                           <columns>
+                            <TableColumn fx:id="orderidCol1" prefWidth="75.0" text="Order ID" />
+                              <TableColumn fx:id="cusidCol1" prefWidth="113.0" text="Customer ID" />
+                              <TableColumn fx:id="priceCol1" prefWidth="57.0" text="Price" />
+                              <TableColumn fx:id="dishesCol1" prefWidth="158.0" text="Dishes" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Button mnemonicParsing="false" onAction="#removeOrder" text="Remove Order" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="Delivery Area">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="da" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label text="Delivery Person">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="dp" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addDel" text="Add Delivery !">
+                     <VBox.margin>
+                        <Insets left="10.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label text="Failed">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Success">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>

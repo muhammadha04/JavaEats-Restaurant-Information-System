@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.cart">
+	<center>
+		<VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+			<children>
+				<GridPane prefHeight="123.0" prefWidth="700.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<VBox.margin>
+						<Insets left="10.0" right="10.0" top="10.0" />
+					</VBox.margin>
+					<children>
+						<Label text="Cart" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+							<GridPane.margin>
+								<Insets bottom="-25.0" />
+							</GridPane.margin>
+						</Label>
+						<Label text="Cart And Checkout" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Label>
+					</children>
+				</GridPane>
+				<GridPane prefHeight="314.0" prefWidth="700.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="0.0" prefWidth="14.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="555.0" minWidth="10.0" prefWidth="541.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="655.0" minWidth="10.0" prefWidth="156.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<TableView id="tblView" fx:id="tblView" prefHeight="280.0" prefWidth="390.0" GridPane.columnIndex="1">
+							<columns>
+								<TableColumn id="namecol" fx:id="namecol" prefWidth="115.0" text="Dish" />
+								<TableColumn id="typecol" fx:id="typecol" minWidth="9.0" prefWidth="74.0" text="Type" />
+                        <TableColumn id="pricecol" fx:id="pricecol" prefWidth="64.0" text="Price" />
+								<TableColumn id="qtycol" fx:id="qtycol" prefWidth="35.0" text="Qty" />
+								<TableColumn id="compscol" fx:id="compscol" prefWidth="248.0" text="Components" />
+							</columns>
+						</TableView>
+						<VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+							<children>
+								<Label fx:id="notSelectedlbl" alignment="CENTER" text="item not selected!" textFill="RED">
+									<VBox.margin>
+										<Insets left="5.0" top="10.0" />
+									</VBox.margin>
+								</Label>
+								<Button mnemonicParsing="false" onAction="#removebtn" text="Remove from cart">
+									<VBox.margin>
+										<Insets bottom="15.0" left="5.0" top="50.0" />
+									</VBox.margin>
+								</Button>
+								<Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="200.0" />
+								<Label text="Edit Quantity :">
+									<VBox.margin>
+										<Insets left="5.0" />
+									</VBox.margin>
+								</Label>
+                        <ChoiceBox fx:id="qty" prefHeight="31.0" prefWidth="65.0">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+								<Button mnemonicParsing="false" onAction="#btnApply" text="Apply">
+									<VBox.margin>
+										<Insets bottom="5.0" left="5.0" top="5.0" />
+									</VBox.margin>
+								</Button>
+								<Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="200.0" />
+								<Button mnemonicParsing="false" onAction="#btnClear" text="Clear Cart">
+									<VBox.margin>
+										<Insets left="5.0" top="10.0" />
+									</VBox.margin>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+				</GridPane>
+				<GridPane prefHeight="241.0" prefWidth="280.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+							<children>
+								<Label text="Total :    ">
+									<padding>
+										<Insets top="35.0" />
+									</padding>
+								</Label>
+								<Label fx:id="priceLbl" text="0.0">
+									<padding>
+										<Insets top="35.0" />
+									</padding>
+								</Label>
+							</children>
+						</HBox>
+						<Button mnemonicParsing="false" onAction="#orderBtn" text="Order Now !" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" />
+                  <Label fx:id="failed" text="Cart is empty !" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="added" text="Created order!" textFill="#2a8d48" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+					</children>
+				</GridPane>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>

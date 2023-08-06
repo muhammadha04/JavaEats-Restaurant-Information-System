@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Menu">
+	<top>
+		<GridPane prefHeight="195.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="24.79999132156372" minHeight="1.5999995231628432" prefHeight="24.79999132156372" />
+				<RowConstraints maxHeight="122.20000076293945" minHeight="10.0" prefHeight="45.400000000000006" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="139.1999938964844" minHeight="0.0" prefHeight="37.60000305175781" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="166.4" minHeight="10.0" prefHeight="54.39999694824219" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="166.4" minHeight="10.0" prefHeight="35.000024414062494" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<TextField fx:id="nameSearch" alignment="CENTER" promptText="Search By Name" GridPane.rowIndex="1">
+					<GridPane.margin>
+						<Insets left="5.0" top="10.0" />
+					</GridPane.margin>
+				</TextField>
+				<ChoiceBox fx:id="types" prefHeight="26.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<CheckBox fx:id="isGluten" mnemonicParsing="false" text="Sensitive to gluten" GridPane.rowIndex="2">
+					<GridPane.margin>
+						<Insets left="20.0" />
+					</GridPane.margin>
+				</CheckBox>
+				<CheckBox fx:id="isLactose" mnemonicParsing="false" text="Sensitive to lactose" GridPane.rowIndex="3">
+					<GridPane.margin>
+						<Insets left="20.0" />
+					</GridPane.margin>
+				</CheckBox>
+				<Label text="Dish Type:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+					<GridPane.margin>
+						<Insets />
+					</GridPane.margin>
+				</Label>
+				<Button mnemonicParsing="false" onAction="#btnSearch" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="4">
+					<GridPane.margin>
+						<Insets bottom="5.0" left="5.0" />
+					</GridPane.margin>
+					<font>
+						<Font size="15.0" />
+					</font>
+				</Button>
+				<Label text="Our Menu" GridPane.columnIndex="1">
+					<font>
+						<Font name="System Bold" size="25.0" />
+					</font>
+					<GridPane.margin>
+						<Insets left="50.0" />
+					</GridPane.margin>
+				</Label>
+            <Button mnemonicParsing="false" onAction="#btnClear" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#getrelvnt" text="Get Relevant Dishes" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </GridPane.margin>
+            </Button>
+			</children>
+			<BorderPane.margin>
+				<Insets top="30.0" />
+			</BorderPane.margin>
+		</GridPane>
+	</top>
+	<center>
+		<Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+	</center>
+   <bottom>
+      <VBox prefHeight="406.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+      		<HBox prefHeight="378.0" prefWidth="700.0">
+      			<children>
+      				<TableView fx:id="tblView" prefHeight="378.0" prefWidth="722.0">
+      					<columns>
+                        <TableColumn fx:id="idcol" prefWidth="75.0" text="ID" />
+                      <TableColumn id="namecol" fx:id="namecol" prefWidth="145.0" text="Dish" />
+                      <TableColumn id="typecol" fx:id="typecol" minWidth="9.0" prefWidth="106.0" text="Type" />
+                        <TableColumn id="pricecol" fx:id="pricecol" prefWidth="116.0" text="Price" />
+                        <TableColumn id="tomcol" fx:id="tomcol" prefWidth="130.0" text="Time to make" />
+                        <TableColumn id="compscol" fx:id="compscol" prefWidth="1000.0" text="Components" />
+      					</columns>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+      				</TableView>
+      				<VBox prefHeight="378.0" prefWidth="342.0">
+      					<children>
+      						<GridPane prefHeight="93.0" prefWidth="190.0">
+      							<columnConstraints>
+      								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      							</columnConstraints>
+      							<rowConstraints>
+      								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      							</rowConstraints>
+      							<children>
+      								<Label text="Quantity">
+      									<font>
+      										<Font size="15.0" />
+      									</font>
+      									<GridPane.margin>
+      										<Insets left="10.0" />
+      									</GridPane.margin>
+      								</Label>
+      								<ChoiceBox id="qty" fx:id="qty" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="1">
+      									<GridPane.margin>
+      										<Insets right="10.0" />
+      									</GridPane.margin>
+      								</ChoiceBox>
+      							</children>
+      						</GridPane>
+                        <Button mnemonicParsing="false" onAction="#editBtn" text="Edit Dish">
+                           <VBox.margin>
+                              <Insets left="40.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+      						<Button alignment="CENTER" mnemonicParsing="false" onAction="#addBtn" prefHeight="58.0" prefWidth="111.0" text="Add to cart">
+      							<VBox.margin>
+      								<Insets left="25.0" top="20.0" />
+      							</VBox.margin>
+      						</Button>
+      						<Button alignment="CENTER" mnemonicParsing="false" onAction="#goToCart" prefHeight="58.0" prefWidth="111.0" text="View cart">
+      							<VBox.margin>
+      								<Insets left="25.0" top="60.0" />
+      							</VBox.margin>
+      						</Button>
+      					</children>
+      				</VBox>
+      			</children>
+      		</HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

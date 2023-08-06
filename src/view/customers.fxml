@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import view.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.customersControl">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Customers">
+               <padding>
+               </padding>
+
+            </Label>
+            <Separator prefWidth="200.0" />
+            <TableView fx:id="cusTbl" prefHeight="180.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="cusID" prefWidth="45.5999755859375" text="cusID" />
+                <TableColumn fx:id="cusFisrt" prefWidth="104.800048828125" text="cusFirst" />
+                  <TableColumn fx:id="cusLast" prefWidth="99.20001220703125" text="cusLast" />
+                  <TableColumn fx:id="birthDay" prefWidth="75.0" text="birthDay" />
+                  <TableColumn fx:id="tgender" prefWidth="75.0" text="tgender" />
+                  <TableColumn fx:id="glutenSin" prefWidth="24.0" text="glutenSin" />
+                  <TableColumn fx:id="lactosSin" prefWidth="33.60003662109375" text="lactosSin" />
+                  <TableColumn fx:id="neighberhood" prefWidth="116.0" text="neighberhood" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+               </VBox.margin>
+            </TableView>
+            <GridPane alignment="CENTER" prefHeight="161.0" prefWidth="600.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.00003662109374" minHeight="10.0" prefHeight="25.39999999999999" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="25.400000000000006" minHeight="10.0" prefHeight="25.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="birthDay" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="46.0" text="Gender" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="76.0" text="firstName">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="lastName" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="neighberhood" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="username" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="password" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </Label>
+                  <CheckBox fx:id="isLactose" mnemonicParsing="false" text="SensitiveToLactose" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="isGluten" mnemonicParsing="false" text="SensitiveToGluten" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                  </CheckBox>
+                  <TextField fx:id="firstName" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                     <padding>
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                     <padding>
+                     </padding>
+                  </TextField>
+                  <DatePicker fx:id="DOB" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                     <padding>
+                     </padding>
+                  </DatePicker>
+                  <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                     </GridPane.margin>
+                     <padding>
+                     </padding>
+                  </TextField>
+                  <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="gender" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="neighb" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Label fx:id="lblError" alignment="TOP_CENTER" contentDisplay="CENTER" text="username already exists" textFill="RED">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblAdded" id="lblAdded" ctext="Succesfully added" textFill="#23e12d" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="52.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addbtn" text="Add">
+               <HBox.margin>
+               </HBox.margin>
+            </Button>
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeBtn" text="Remove" />
+         </children>
+         <BorderPane.margin>
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
