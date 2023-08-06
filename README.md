@@ -1,4 +1,4 @@
-# JavaEats Restaurant Information System
+![image](https://github.com/muhammadha04/JavaEats-Restaurant-Information-System/assets/103769302/0dd16b75-0d50-4b8f-a212-c76601879b94)# JavaEats Restaurant Information System
 
 ## Overview
 
@@ -19,3 +19,6 @@ JavaEats is a comprehensive information system designed to optimize and adapt th
 ## Academic Project
 
 This project was developed as the final exercise for the Object-Oriented Programming (OOP) course in Java. The Information System showcases the integration of various OOP concepts and provides a real-world solution to managing a restaurant's daily operations. It stands as a testament to the skills and knowledge acquired in the course.
+
+
+![image](https://github.com/muhammadha04/JavaEats-Restaurant-Information-System/assets/103769302/e27784ac-5181-4a33-bb1b-ec0fccdd99a5)
